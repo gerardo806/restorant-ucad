@@ -26,6 +26,8 @@
     <!-- jQuery -->
     <script src="resources/plugins/jquery/jquery.min.js"></script>
     <script src="resources/dist/js/md5.js"></script>
+
+    <link rel="stylesheet" href="resources/dist/css/styles.css">
 </head>
 
 <body class="hold-transition login-page">
@@ -62,26 +64,35 @@
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Completar formulario</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header bg-dark">
+                    <h5 class="modal-title text-white" id="staticBackdropLabel">Completar formulario</h5>
+                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label h2">Usuario</label>
-                            <input type="text" class="form-control p-2" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text"></div>
+                    <form autocomplete="off">
+                        <div class="text-center">
+                            <img src="resources/dist/img/logo-joya-restaurant.png" class="img-logo-login" alt="logo">
+                            <h3>Joya's Restaurant</h3>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control p-2" id="exampleInputPassword1">
+                            <label class="form-label w-100">
+                                <span class="h5">Usuario</span>
+                                <input type="text" class="form-control p-2 mt-2" id="username" name="username"
+                                aria-describedby="userHelp">
+                            </label>
+                            <div id="userHelp" class="form-text"></div>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label w-100">
+                                <span class="h5">Contraseña</span>
+                                <input type="password" class="form-control p-2 mt-2">
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-info w-100 p-2 text-white">Iniciar Sesión</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-info p-2 text-white">Iniciar Sesión</button>
+                    <button type="button" class="btn btn-danger p-2 text-white">Crear cuenta</button>
                     <button type="button" class="btn btn-secondary p-2" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
