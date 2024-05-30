@@ -4,13 +4,14 @@ error_reporting(E_ERROR);
 
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$clave = '';
-$bd = 'bd_vehiculos';
+$clave = 'root';
+$bd = 'mydb';
 
 $con = mysqli_connect($servidor, $usuario,$clave, $bd);
 
 if($con){
-    $con->set_charset("utf-8");
+    //utf-8
+    $con->set_charset("utf8");
 }else{
     $response = array(
         'success'=>false,

@@ -69,26 +69,24 @@
                     <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form autocomplete="off">
+                    <form autocomplete="off" id="formLogin" name="formLogin">
                         <div class="text-center">
                             <img src="resources/dist/img/logo-joya-restaurant.png" class="img-logo-login" alt="logo">
                             <h3>Joya's Restaurant</h3>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 msgHelp">
                             <label class="form-label w-100">
                                 <span class="h5">Usuario</span>
-                                <input type="text" class="form-control p-2 mt-2" id="username" name="username"
-                                aria-describedby="userHelp">
+                                <input type="text" class="form-control p-2 mt-2" id="username" name="username">
                             </label>
-                            <div id="userHelp" class="form-text"></div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 msgHelp">
                             <label class="form-label w-100">
                                 <span class="h5">Contraseña</span>
-                                <input type="password" class="form-control p-2 mt-2">
+                                <input type="password" name="passUser" id="passUser" class="form-control p-2 mt-2">
                             </label>
                         </div>
-                        <button type="button" class="btn btn-info w-100 p-2 text-white">Iniciar Sesión</button>
+                        <input type="submit" id="signIn" class="btn btn-info w-100 p-2 text-white" value="Iniciar Sesión">
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -109,6 +107,11 @@
     <script src="resources/vendors/prism/prism.js"></script>
     <script src="resources/vendors/swiper/swiper-bundle.min.js"></script>
     <script src="resources/dist/js/theme.js"></script>
+
+     <!--jquery validate-->
+  <script type="text/javascript" src="resources/plugins/jquery-validation/jquery.validate.js"></script>
+  <script type="text/javascript" src="resources/plugins/jquery-validation/additional-methods.js"></script>
+  <script type="text/javascript" src="resources/plugins/jquery-validation/localization/messages_es.js"></script>
     <!--sweetalert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

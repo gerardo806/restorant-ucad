@@ -6,23 +6,13 @@ $params = $_POST;
 
 try{
 
-    $sql = "SELECT u.id_usuario, u.nombres, u.apellidos, u.usuario, r.rol, r.id_rol,
-        IF(
-            CAST(u.estado AS UNSIGNED) =1,
-            true,
-            false
-        ) estadoOk,
-        IF(
-            c.fecha_vencimiento < NOW(),
-            false,
-            true
-        ) accesoOk
-        FROM usuario u
-        INNER JOIN clave c ON u.id_usuario=c.id_usuario AND CAST(c.estado AS UNSIGNED)=1
-        INNER JOIN usuario_rol ur ON u.id_usuario=ur.id_usuario AND CAST(ur.estado AS UNSIGNED)=1
-        INNER JOIN rol r ON ur.id_rol=r.id_rol
-        WHERE u.usuario='$params[usuario]'
-        AND c.clave=PASSWORD('$params[clave]')";
+    $sql = "SELECT u.idusuario, u.nombre_usuario, u.estado, c.clave_usuario
+            FROM usuario u
+            INNER JOIN clave c ON u.idusuario = c.idusuario
+            WHERE u.nombre_usuario = '{$params['usuario']}'
+            AND c.fecha_vencimiento >= NOW()
+            AND CAST(c.estado AS UNSIGNED) = 1";
+
         $resultado = mysqli_query($con, $sql);
 
         if(!$resultado){
@@ -35,30 +25,29 @@ try{
 
         $datosUsuario = mysqli_fetch_assoc($resultado);
 
-        if(!$datosUsuario['estadoOk']){
+        if($datosUsuario['estado'] == 0){
             throw new Exception('Su cuenta está inactiva');
         }
 
-        if(!$datosUsuario['accesoOk']){
-            throw new Exception('Su clave está  vencida');
+        if (!password_verify($params['clave'], $datosUsuario['clave_usuario'])) {
+            throw new Exception('No hay coincidencia en las credenciales');
         }
 
 
         session_start();
 
-        $_SESSION['vehiculos'] = true;
-        $_SESSION['vehiculos_id_usuario'] = $datosUsuario['id_usuario'];
-        $_SESSION['vehiculos_usuario'] = $datosUsuario['usuario'];
-        $_SESSION['vehiculos_name'] = $datosUsuario['nombres'] . " " . $datosUsuario["apellidos"];
-        $_SESSION['vehiculos_id_rol'] = $datosUsuario['id_rol'];
-        $_SESSION['vehiculos_rol'] = $datosUsuario['rol'];
+        $_SESSION['restoran'] = true;
+        $_SESSION['restoran_id_usuario'] = $datosUsuario['idusuario'];
+        $_SESSION['restoran_usuario'] = $datosUsuario['nombre_usuario'];
+        //$_SESSION['vehiculos_name'] = $datosUsuario['nombres'] . " " . $datosUsuario["apellidos"];
+        //$_SESSION['vehiculos_id_rol'] = $datosUsuario['id_rol'];
+        //$_SESSION['vehiculos_rol'] = $datosUsuario['rol'];
 
-        $sql ="INSERT INTO bitacora(fecha, accion, tabla, id_afectado, id_usuario)
+        /*$sql ="INSERT INTO bitacora(fecha, accion, tabla, id_afectado, id_usuario)
         VALUES(NOW(), 1, 'no aplica', 0, '$_SESSION[vehiculos_id_usuario]')";
-        $resultado = mysqli_query($con, $sql);
+        $resultado = mysqli_query($con, $sql);*/
 
-        $response = array('success'=>true, 'url'=>"?mod=inicio");
-        
+        $response = array('success'=>true, 'url'=>"?mod=inicio");        
 
 }catch(Exception $e){
     $response = array(

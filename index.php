@@ -23,4 +23,8 @@ if(isset($conf[$modulo]['layout'])){
     }
 }
 
+/* $clave = '1234';
+$clave_encriptada = password_hash($clave, PASSWORD_DEFAULT);
+echo $clave_encriptada; */
+
 ?>
