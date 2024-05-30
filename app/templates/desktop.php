@@ -65,7 +65,7 @@ if (!isset($_SESSION['restoran'])) {
                                 <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
                                     <li><a class="dropdown-item border-bottom" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" id="cerrarSesion" href="#">Cerrar sesión</a></li>
+                                    <li><a class="dropdown-item" id="logout" href="#">Cerrar sesión</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -162,6 +162,8 @@ if (!isset($_SESSION['restoran'])) {
     <link rel="stylesheet" href="resources/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <script type="text/javascript" src="resources/plugins/select2/js/select2.full.min.js"></script>
     <script type="text/javascript" src="resources/plugins/select2/js/i18n/es.js"></script>
+
+    <script type="module" src="resources/dist/js/general.js"></script>
 </body>
 
 </html>
