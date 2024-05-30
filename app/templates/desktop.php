@@ -1,5 +1,5 @@
 <?php
-if (!isset($_SESSION['vehiculos'])) {
+if (!isset($_SESSION['restoran'])) {
   header('Cache-control: no-cache; must-revalidate');
   header('location: ?mod=login');
 }
@@ -9,188 +9,159 @@ if (!isset($_SESSION['vehiculos'])) {
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inges</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restoran</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="resources/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="resources/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="resources/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="resources/plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="resources/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="resources/plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="resources/plugins/summernote/summernote-bs4.min.css">
-  <!-- jQuery -->
-  <script src="resources/plugins/jquery/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="resources/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/dist/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/dist/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/dist/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/dist/img/favicons/favicon.ico">
+    <link rel="manifest" href="resources/dist/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="resources/dist/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="resources/vendors/prism/prism.css" rel="stylesheet">
+    <link href="resources/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="resources/dist/css/theme.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="resources/plugins/jquery/jquery.min.js"></script>
+    <script src="resources/dist/js/md5.js"></script>
+
+    <link rel="stylesheet" href="resources/dist/css/styles.css">
 
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-  <div class="wrapper">
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+            data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container"><a class="navbar-brand" href="index.html">
+                    Joya's Restaurant
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><i
+                        class="fa-solid fa-bars text-white fs-3"></i></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#vacantes">Empleos</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#menus">Menús</a></li>
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle p-2 rounded-1" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?=$_SESSION['restoran_usuario']?>
+                                </button>
+                                <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" id="cerrarSesion" href="#">Cerrar sesión</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="resources/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div>
-
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-      </ul>
-      <div style="width: 100%;">
-        <button type="button" class="btn btn-danger float-right" id="btn_offline">
-          <i class="fas fa-sign-out-alt"></i> Cerrar sesión
-        </button>
-      </div>
-    </nav>
-    <!-- /.navbar -->
-
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="resources/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Inges</span>
-      </a>
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="resources/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-          </div>
-          <div class="info">
-            <a href="#" class="d-block">
-              <?php
-              echo $_SESSION['vehiculos_usuario'];
-              ?>
-            </a>
-          </div>
+        <div>
+            <section>
+                <div class="container">
+                    <div class="row align-items-center py-lg-8 py-6">
+                        <?php @include(MODULO_PATH . "/" . $conf[$modulo]['archivo']);?>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
-              <a href="?mod=vehiculos" class="nav-link">
-                <i class="nav-icon fas fa-car"></i>
-                <p>
-                  Vehiculos
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="?mod=usuarios" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                  Usuarios
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="?mod=tamales" class="nav-link">
-                <i class="nav-icon fas fa-arrow-left"></i>
-                <p>
-                  Otra pantalla
-                </p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
+        <section class="pt-0">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-sm-12">
+                        <a href="index.html"><img class="img-fluid mt-5 mb-4" src="resources/dist/img/black-logo.png"
+                                alt="" /></a>
+                        <p class="w-lg-75 text-gray">
+                            Social media validation business model canvas graphical user interface
+                            launch party creative facebook iPad twitter.
+                        </p>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <h3 class="fw-bold fs-1 mt-5 mb-4">Landings</h3>
+                        <ul class="list-unstyled">
+                            <li class="my-3 col-md-4"><a href="#">Home</a></li>
+                            <li class="my-3"><a href="#">Products</a></li>
+                            <li class="my-3"><a href="#">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <h3 class="fw-bold fs-1 mt-5 mb-4">Company</h3>
+                        <ul class="list-unstyled">
+                            <li class="my-3"><a href="#">Home</a></li>
+                            <li class="my-3">
+                                <a href="#">Careers</a><span
+                                    class="py-1 px-2 rounded-2 bg-success fw-bold text-dark ms-2">Hiring!</span>
+                            </li>
+                            <li class="my-3"><a href="#">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-sm-4">
+                        <h3 class="fw-bold fs-1 mt-5 mb-4">Resources</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><a href="#">Home</a></li>
+                            <li class="mb-3"><a href="#">Products</a></li>
+                            <li class="mb-3"><a href="#">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-gray">All rights reserved.</p>
+            </div>
+            <!-- end of .container-->
+        </section>
+    </main>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <div class="m-3">
-        <?php
-        @include(MODULO_PATH . "/" . $conf[$modulo]['archivo']);
-        ?>
-      </div>
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2024 <a href="#">Ingenieros UCAD</a>.</strong>
-      Todos los derechos reservados, y los izquierdos también.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.0.0
-      </div>
-    </footer>
+    <script src="resources/vendors/popper/popper.min.js"></script>
+    <script src="resources/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="resources/vendors/anchorjs/anchor.min.js"></script>
+    <script src="resources/vendors/is/is.min.js"></script>
+    <script src="resources/vendors/fontawesome/all.min.js"></script>
+    <script src="resources/vendors/lodash/lodash.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="resources/vendors/prism/prism.js"></script>
+    <script src="resources/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="resources/dist/js/theme.js"></script>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-  </div>
-  <!-- ./wrapper -->
+    <!--jquery validate-->
+    <script type="text/javascript" src="resources/plugins/jquery-validation/jquery.validate.js"></script>
+    <script type="text/javascript" src="resources/plugins/jquery-validation/additional-methods.js"></script>
+    <script type="text/javascript" src="resources/plugins/jquery-validation/localization/messages_es.js"></script>
+    <!--sweetalert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- DataTable -->
+    <link rel="stylesheet" type="text/css" href="resources/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="resources/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <script type="text/javascript" src="resources/plugins/datatables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="resources/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="resources/plugins/datatables-responsive/js/dataTables.responsive.min.js">
+    </script>
+    <script type="text/javascript" src="resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js">
+    </script>
 
-
-  <!-- jQuery UI 1.11.4 -->
-  <script src="resources/plugins/jquery-ui/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button)
-  </script>
-  <!-- Bootstrap 4 -->
-  <script src="resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- ChartJS -->
-  <script src="resources/plugins/chart.js/Chart.min.js"></script>
-
-  <!-- jQuery Knob Chart -->
-  <script src="resources/plugins/jquery-knob/jquery.knob.min.js"></script>
-  <!-- daterangepicker -->
-  <script src="resources/plugins/moment/moment.min.js"></script>
-  <script src="resources/plugins/daterangepicker/daterangepicker.js"></script>
-  <!-- Tempusdominus Bootstrap 4 -->
-  <script src="resources/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-  <!-- Summernote -->
-  <script src="resources/plugins/summernote/summernote-bs4.min.js"></script>
-  <!-- overlayScrollbars -->
-  <script src="resources/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-  <!-- AdminLTE App -->
-  <script src="resources/dist/js/adminlte.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="resources/dist/js/demo.js"></script>
-  <!--sweetalert-->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- DataTable -->
-  <link rel="stylesheet" type="text/css" href="resources/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" type="text/css" href="resources/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <script type="text/javascript" src="resources/plugins/datatables/jquery.dataTables.js"></script>
-  <script type="text/javascript" src="resources/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script type="text/javascript" src="resources/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script type="text/javascript" src="resources/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-
-  <!-- Select2 -->
-  <link rel="stylesheet" href="resources/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="resources/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  <script type="text/javascript" src="resources/plugins/select2/js/select2.full.min.js"></script>
-  <script type="text/javascript" src="resources/plugins/select2/js/i18n/es.js"></script>
-
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <!--<script src="resources/plugins/dist/js/pages/dashboard.js"></script>-->
-  <script src="resources/dist/js/general.js"></script>
+    <!-- Select2 -->
+    <link rel="stylesheet" href="resources/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="resources/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <script type="text/javascript" src="resources/plugins/select2/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="resources/plugins/select2/js/i18n/es.js"></script>
 </body>
 
 </html>
