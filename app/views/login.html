@@ -6,11 +6,7 @@
   <!-- ============================================-->
 
   <div class="bg-dark" id="inicio">
-    <img
-      class="img-fluid position-absolute end-0"
-      src="resources/dist/img/local3.png"
-      alt=""
-    />
+    <img class="img-fluid position-absolute end-0" src="resources/dist/img/local3.png" alt="" />
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
@@ -22,7 +18,7 @@
               Joya's Restaurant
             </h1>
             <p class="text-white py-lg-3 py-2">
-              Fundado en El Salvador en 1992, Joya's Restaurant se ha convertido en la opcion preferida de 
+              Fundado en El Salvador en 1992, Joya's Restaurant se ha convertido en la opcion preferida de
               los salvadoreños de San Salvador.
             </p>
             <div class="d-sm-flex align-items-center gap-3">
@@ -32,18 +28,12 @@
             </div>
           </div>
           <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
-            <img
-              class="img-fluid"
-              src="resources/dist/img/logo-joya-restaurant.png"
-              alt=""
-            />
+            <img class="img-fluid" src="resources/dist/img/logo-joya-restaurant.png" alt="" />
           </div>
         </div>
         <div class="swiper">
-          <div
-            class="swiper-container swiper-shadow swiper-theme"
-            data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'
-          >
+          <div class="swiper-container swiper-shadow swiper-theme"
+            data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
             <div class="swiper-wrapper">
               <div class="swiper-slide text-center">
                 <img src="resources/dist/img/logos/desayuno.png" alt="" />
@@ -78,61 +68,178 @@
   <section>
     <div class="container" id="vacantes">
       <p class="text-center fs-1">Sección de empleos</p>
-      <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75">
-        Vacantes disponibles.
+      <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mt-4">
+        Vacantes disponibles
       </h2>
       <div class="row gx-xl-7 mt-5">
+        
+        <!-- Plaza de Cocina -->
         <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
-          <img
-            class="w-50 w-md-100"
-            src="resources/dist/img/services/1.png"
-            alt=""
-          />
-          <h4 class="mt-3 my-1">Cajero</h4>
+          <img class="w-50 w-md-100" src="resources/dist/img/services/9.jpeg" alt="" />
+          <h4 class="mt-3 my-1">Asistente de cocina</h4>
           <p class="fs-1 mb-0">
-            Se solicita cajero con 1 año de experiencia...
+            Buscamos un asistente de cocina proactivo y motivado
+            para nuestro restaurante en Joya's Restaurant.
           </p>
-          <a
-            class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none"
-            href="#"
-            >Explore page<i class="fa-solid fa-arrow-right ms-2"></i
-          ></a>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#cocinaModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Asistente de Cocina / Cocinera -->
+          <div class="modal fade" id="cocinaModal" tabindex="-1" aria-labelledby="cocinaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cocinaModalLabel">Información del Puesto - Asistente de Cocina / Cocinera
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Asistente de Cocina / Cocinera</td>
+                        <td>Buscamos un/a asistente de cocina proactivo/a y motivado/a para nuestro restaurante en
+                          Joya's Restaurant. Trabajará con el jefe de cocina y el equipo para asegurar la alta calidad
+                          en la preparación y presentación de los platos.</td>
+                        <td>Turno rotativo</td>
+                        <td>$1800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Plaza de Cajera -->
         <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
-          <img
-            class="w-50 w-md-100"
-            src="resources/dist/img/services/2.png"
-            alt=""
-          />
-          <h4 class="mt-3 my-1">Mesero</h4>
+          <img class="w-50 w-md-100" src="resources/dist/img/services/8.jpeg" alt="" />
+          <h4 class="mt-3 my-1">Cajera</h4>
           <p class="fs-1 mb-0">
-            Se solicita mesero/a de tiempo completo...
+            Estamos buscando una cajera amable y eficiente para nuestro establecimiento
+            en Joya's Restaurant.
           </p>
-          <a
-            class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none"
-            href="#"
-            >Explore page<i class="fa-solid fa-arrow-right ms-2"></i
-          ></a>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#cajeraModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Cajera -->
+          <div class="modal fade" id="cajeraModal" tabindex="-1" aria-labelledby="cajeraModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cajeraModalLabel">Información del Puesto - Cajera</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Cajera</td>
+                        <td>Estamos buscando una cajera amable y eficiente para nuestro establecimiento en Joya's
+                          Restaurant. Responsabilidades incluyen manejar transacciones con precisión y cortesía, y
+                          asegurar una experiencia de cliente positiva.</td>
+                        <td>Turno rotativo</td>
+                        <td>$1700</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Plaza de Vigilante -->
         <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
-          <img
-            class="w-50 w-md-100"
-            src="resources/dist/img/services/3.png"
-            alt=""
-          />
+          <img class="w-50 w-md-100" src="resources/dist/img/services/10.jpeg" alt="" />
           <h4 class="mt-3 my-1">Vigilante</h4>
           <p class="fs-1 mb-0">
-            Se requiere de un vigilante con permiso de portar armas...
+            Se necesita un vigilante para garantizar la seguridad de nuestro
+            restaurante en Joya's Restaurant.
           </p>
-          <a
-            class="text-dark fs-1 pb-2 fw-bold border-black border-bottom text-decoration-none"
-            href="#"
-            >Explore page<i class="fa-solid fa-arrow-right ms-2"></i
-          ></a>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#vigilanteModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Vigilante -->
+          <div class="modal fade" id="vigilanteModal" tabindex="-1" aria-labelledby="vigilanteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="vigilanteModalLabel">Información del Puesto - Vigilante</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Vigilante</td>
+                        <td>Se necesita un vigilante para garantizar la seguridad de nuestro restaurante en Joya's
+                          Restaurant. Responsabilidades incluyen patrullar las instalaciones, monitorear cámaras de
+                          seguridad y responder a situaciones de emergencia.</td>
+                        <td>Turno nocturno</td>
+                        <td>$2000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- end of .container-->
+
+
+
+        <!-- end of .container-->
   </section>
   <!-- <section> close ============================-->
   <!-- ============================================-->
@@ -140,7 +247,7 @@
   <!-- ============================================-->
   <!-- <section> begin ============================-->
   <hr>
-    <section>
+  <section>
     <div class="container" id="menus">
       <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Menús</h1>
       <div class="row align-items-center">
@@ -153,16 +260,13 @@
           </h2>
           <ul class="list-unstyled my-xl-5 my-3">
             <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
-              <i class="fa-solid fa-circle-check fs-4 text-dark"></i
-              ><span>Café.</span>
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Café.</span>
             </li>
             <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
-              <i class="fa-solid fa-circle-check fs-4 text-dark"></i
-              ><span>Huevos revueltos.</span>
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Huevos revueltos.</span>
             </li>
             <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
-              <i class="fa-solid fa-circle-check fs-4 text-dark"></i
-              ><span>Pan tostado.</span>
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Pan tostado.</span>
             </li>
           </ul>
           <button class="btn btn-dark">$4.99</button>
@@ -185,12 +289,7 @@
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-lg-6 col-sm-12">
-        <a href="index.html"
-          ><img
-            class="img-fluid mt-5 mb-4"
-            src="resources/dist/img/black-logo.png"
-            alt=""
-        /></a>
+        <a href="index.html"><img class="img-fluid mt-5 mb-4" src="resources/dist/img/black-logo.png" alt="" /></a>
         <p class="w-lg-75 text-gray">
           Social media validation business model canvas graphical user interface
           launch party creative facebook iPad twitter.
@@ -209,10 +308,7 @@
         <ul class="list-unstyled">
           <li class="my-3"><a href="#">Home</a></li>
           <li class="my-3">
-            <a href="#">Careers</a
-            ><span class="py-1 px-2 rounded-2 bg-success fw-bold text-dark ms-2"
-              >Hiring!</span
-            >
+            <a href="#">Careers</a><span class="py-1 px-2 rounded-2 bg-success fw-bold text-dark ms-2">Hiring!</span>
           </li>
           <li class="my-3"><a href="#">Services</a></li>
         </ul>
