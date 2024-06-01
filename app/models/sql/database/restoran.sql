@@ -1222,6 +1222,237 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usuario_empleado` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `mydb`.`Tipo falta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Tipo falta` (
+  `idTipo falta` INT NOT NULL AUTO_INCREMENT,
+  `falta` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  PRIMARY KEY (`idTipo falta`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Falta empleado`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Falta empleado` (
+  `idFalta empleado` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(450) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idempleado` INT NOT NULL,
+  `idTipo falta` INT NOT NULL,
+  PRIMARY KEY (`idFalta empleado`),
+  INDEX `fk_Falta empleado_empleado1_idx` (`idempleado` ASC) ,
+  INDEX `fk_Falta empleado_Tipo falta1_idx` (`idTipo falta` ASC) ,
+  CONSTRAINT `fk_Falta empleado_empleado1`
+    FOREIGN KEY (`idempleado`)
+    REFERENCES `mydb`.`empleado` (`idempleado`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Falta empleado_Tipo falta1`
+    FOREIGN KEY (`idTipo falta`)
+    REFERENCES `mydb`.`Tipo falta` (`idTipo falta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Tipo red social`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Tipo red social` (
+  `idTipo red social` INT NOT NULL AUTO_INCREMENT,
+  `nombre_red` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  PRIMARY KEY (`idTipo red social`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`persona_red_social`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`persona_red_social` (
+  `idpersona_red_social` INT NOT NULL AUTO_INCREMENT,
+  `enlace` VARCHAR(150) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idpersona` INT NOT NULL,
+  `idTipo red social` INT NOT NULL,
+  PRIMARY KEY (`idpersona_red_social`),
+  INDEX `fk_persona_red_social_persona1_idx` (`idpersona` ASC) ,
+  INDEX `fk_persona_red_social_Tipo red social1_idx` (`idTipo red social` ASC) ,
+  CONSTRAINT `fk_persona_red_social_persona1`
+    FOREIGN KEY (`idpersona`)
+    REFERENCES `mydb`.`persona` (`idpersona`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_persona_red_social_Tipo red social1`
+    FOREIGN KEY (`idTipo red social`)
+    REFERENCES `mydb`.`Tipo red social` (`idTipo red social`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Tipo proveedor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Tipo proveedor` (
+  `idTipo proveedor` INT NOT NULL AUTO_INCREMENT,
+  `nombre_tipo_proveedor` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  PRIMARY KEY (`idTipo proveedor`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Proveedor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Proveedor` (
+  `idProveedor` INT NOT NULL AUTO_INCREMENT,
+  `nombre_proveedor` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idTipo proveedor` INT NOT NULL,
+  PRIMARY KEY (`idProveedor`),
+  INDEX `fk_Proveedor_Tipo proveedor1_idx` (`idTipo proveedor` ASC) ,
+  CONSTRAINT `fk_Proveedor_Tipo proveedor1`
+    FOREIGN KEY (`idTipo proveedor`)
+    REFERENCES `mydb`.`Tipo proveedor` (`idTipo proveedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Direccion_proveedor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Direccion_proveedor` (
+  `idDireccion_proveedor` INT NOT NULL AUTO_INCREMENT,
+  `localidad` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idProveedor` INT NOT NULL,
+  `iddistrito` INT NOT NULL,
+  PRIMARY KEY (`idDireccion_proveedor`),
+  INDEX `fk_Direccion_proveedor_Proveedor1_idx` (`idProveedor` ASC) ,
+  INDEX `fk_Direccion_proveedor_distrito1_idx` (`iddistrito` ASC) ,
+  CONSTRAINT `fk_Direccion_proveedor_Proveedor1`
+    FOREIGN KEY (`idProveedor`)
+    REFERENCES `mydb`.`Proveedor` (`idProveedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Direccion_proveedor_distrito1`
+    FOREIGN KEY (`iddistrito`)
+    REFERENCES `mydb`.`distrito` (`iddistrito`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Proveedor telefono`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Proveedor telefono` (
+  `idProveedor telefono` INT NOT NULL AUTO_INCREMENT,
+  `contacto` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idProveedor` INT NOT NULL,
+  `idtipo_tel` INT NOT NULL,
+  PRIMARY KEY (`idProveedor telefono`),
+  INDEX `fk_Proveedor telefono_Proveedor1_idx` (`idProveedor` ASC) ,
+  INDEX `fk_Proveedor telefono_tipo_tel1_idx` (`idtipo_tel` ASC) ,
+  CONSTRAINT `fk_Proveedor telefono_Proveedor1`
+    FOREIGN KEY (`idProveedor`)
+    REFERENCES `mydb`.`Proveedor` (`idProveedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Proveedor telefono_tipo_tel1`
+    FOREIGN KEY (`idtipo_tel`)
+    REFERENCES `mydb`.`tipo_tel` (`idtipo_tel`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Marcador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Marcador` (
+  `idMarcador` INT NOT NULL AUTO_INCREMENT,
+  `marca` VARCHAR(45) NOT NULL,
+  `modelo` VARCHAR(45) NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `ubicacion` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`idMarcador`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Proveedor marcador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Proveedor marcador` (
+  `idProveedor marcador` INT NOT NULL AUTO_INCREMENT,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idProveedor` INT NOT NULL,
+  `idMarcador` INT NOT NULL,
+  PRIMARY KEY (`idProveedor marcador`),
+  INDEX `fk_Proveedor marcador_Proveedor1_idx` (`idProveedor` ASC) ,
+  INDEX `fk_Proveedor marcador_Marcador1_idx` (`idMarcador` ASC) ,
+  CONSTRAINT `fk_Proveedor marcador_Proveedor1`
+    FOREIGN KEY (`idProveedor`)
+    REFERENCES `mydb`.`Proveedor` (`idProveedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Proveedor marcador_Marcador1`
+    FOREIGN KEY (`idMarcador`)
+    REFERENCES `mydb`.`Marcador` (`idMarcador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Marcacion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Marcacion` (
+  `idMarcacion` INT NOT NULL AUTO_INCREMENT,
+  `marcado` VARCHAR(45) NOT NULL,
+  `fecha` DATETIME NOT NULL,
+  `estado` ENUM('1', '0') NOT NULL,
+  `Marcador_idMarcador` INT NOT NULL,
+  PRIMARY KEY (`idMarcacion`),
+  INDEX `fk_Marcacion_Marcador1_idx` (`Marcador_idMarcador` ASC) ,
+  CONSTRAINT `fk_Marcacion_Marcador1`
+    FOREIGN KEY (`Marcador_idMarcador`)
+    REFERENCES `mydb`.`Marcador` (`idMarcador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`empleado marcacion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`empleado marcacion` (
+  `idempleado marcacion` INT NOT NULL AUTO_INCREMENT,
+  `estado` ENUM('1', '0') NOT NULL,
+  `idMarcacion` INT NOT NULL,
+  `idempleado` INT NOT NULL,
+  PRIMARY KEY (`idempleado marcacion`),
+  INDEX `fk_empleado marcacion_Marcacion1_idx` (`idMarcacion` ASC) ,
+  INDEX `fk_empleado marcacion_empleado1_idx` (`idempleado` ASC) ,
+  CONSTRAINT `fk_empleado marcacion_Marcacion1`
+    FOREIGN KEY (`idMarcacion`)
+    REFERENCES `mydb`.`Marcacion` (`idMarcacion`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_empleado marcacion_empleado1`
+    FOREIGN KEY (`idempleado`)
+    REFERENCES `mydb`.`empleado` (`idempleado`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

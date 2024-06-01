@@ -4,7 +4,7 @@ error_reporting(E_ERROR);
 
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$clave = 'root';
+$clave = '';
 $bd = 'mydb';
 
 $con = mysqli_connect($servidor, $usuario,$clave, $bd);
