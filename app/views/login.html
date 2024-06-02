@@ -248,15 +248,16 @@
   <!-- <section> begin ============================-->
   <hr>
   <section>
-    <div class="container" id="menus">
-      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Menús</h1>
+    <div class="container" id="desayuno">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">¡Saborea la perfección con nuestros combos diarios!</h1>
+      <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Desayunos</h2>
       <div class="row align-items-center">
         <div class="col-lg-6 text-center text-lg-start">
-          <img class="img-fluid" src="resources/dist/img/desayuno.jpg" alt="" />
+          <img class="img-fluid" src="resources/dist/img/huevos.jpeg" alt="" />
         </div>
         <div class="col-lg-6">
           <h2 class="fs-xl-5 fs-lg-4 fs-3">
-            Desayuno para empezar el dia.
+            El desayuno para iniciar el día
           </h2>
           <ul class="list-unstyled my-xl-5 my-3">
             <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
@@ -267,14 +268,200 @@
             </li>
             <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
               <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Pan tostado.</span>
+            </li><li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$4.00</span>
             </li>
           </ul>
-          <button class="btn btn-dark">$4.99</button>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+            Solicitar Pedido
+          </button>
+
+          <!-- Modal de de pedido de meno desayuno -->
+          <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="fechaPedido">Fecha del Pedido</label>
+                        <input type="date" class="form-control" id="fechaPedido" value="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nombre del cliente</label>
+                        <input type="name" class="form-control" id="inputPassword4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
     <!-- end of .container-->
   </section>
+  <section>
+    <div class="container" id="almuerzo">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Almuerzos</h1>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="img-fluid" src="resources/dist/img/hambu1.jpeg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fs-xl-5 fs-lg-4 fs-3">
+            Un almuerzo ejecutivo
+          </h2>
+          <ul class="list-unstyled my-xl-5 my-3">
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Gaseosa.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Hamburguesa Clásica.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Papas Fritas.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$13.00</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+          data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+          Solicitar Pedido
+        </button>
+
+        <!-- Modal de de pedido de meno desayuno -->
+        <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="fechaPedido">Fecha del Pedido</label>
+                      <input type="date" class="form-control" id="fechaPedido" value="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Nombre del cliente</label>
+                      <input type="name" class="form-control" id="inputPassword4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Pedido</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Cantidad</label>
+                    <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Cerrar
+                </button>
+                <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <section>
+    <div class="container" id="cena">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Cena</h1>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="img-fluid" src="resources/dist/img/lasaña.jpeg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fs-xl-5 fs-lg-4 fs-3">
+            La cena ligera y balanceada
+          </h2>
+          <ul class="list-unstyled my-xl-5 my-3">
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Licuado</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Lasagña de Carne.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Pan tostado.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$16.00</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+            Solicitar Pedido
+          </button>
+
+          <!-- Modal de de pedido de meno desayuno -->
+          <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="fechaPedido">Fecha del Pedido</label>
+                        <input type="date" class="form-control" id="fechaPedido" value="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nombre del cliente</label>
+                        <input type="name" class="form-control" id="inputPassword4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 </div>
 <!-- ===============================================-->
 <!--    End of Main Content-->
@@ -330,3 +517,12 @@
 <!-- ============================================-->
 
 <script type="module" src="app/controllers/login.js"></script>
+<script>
+  // Obtener la fecha actual en el formato "yyyy-mm-dd"
+  var today = new Date().toISOString().split('T')[0];
+  
+  // Establecer la fecha actual como valor predeterminado para el campo de entrada de fecha
+  document.getElementById('fechaPedido').value = today;
+</script>
+
+
