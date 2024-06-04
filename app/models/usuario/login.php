@@ -47,7 +47,8 @@ try{
         VALUES(NOW(), 1, 'no aplica', 0, '$_SESSION[vehiculos_id_usuario]')";
         $resultado = mysqli_query($con, $sql);*/
 
-        $response = array('success'=>true, 'url'=>"?mod=inicio");        
+        //$response = array('success'=>true, 'url'=>"?mod=inicio");        
+        $response = array('success'=>true, 'url'=>"home");        
 
 }catch(Exception $e){
     $response = array(

@@ -1,0 +1,21 @@
+#Restringir el acceso a los archivos
+Options All -Indexes
+
+# Activar el motor de reescritura
+RewriteEngine On
+
+# Redirigir todas las solicitudes a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+#Rutas amigables
+RewriteRule ^(home)$ index.php?mod=inicio [QSA,L]
+RewriteRule ^(login)$ index.php?mod=login [QSA,L]
+RewriteRule ^(users)$ index.php?mod=usuarios [QSA,L]
+
+#RewriteRule ^([a-zA-Z0-9/]+)$ login.html?url=$1 [NC,L]
+
+#Redirigir al archivo 404
+ErrorDocument 404 /restorant-ucad/app/views/error404.html
+ErrorDocument 403 /restorant-ucad/app/views/error404.html

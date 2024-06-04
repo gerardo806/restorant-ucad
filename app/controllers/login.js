@@ -9,7 +9,6 @@ $(document).ready(function () {
     });
 
     $btnLogin.click(function (e) {
-        console.log('click...');
         $formLogin.validate({
             ignore: "",
             rules: {

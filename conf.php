@@ -16,8 +16,8 @@ $conf['inicio'] = array(
     'layout'=>LAYOUT_DESKTOP
 );
 
-$conf['vehiculos'] = array(
-    'archivo'=>'vehiculos.html',
+$conf['empleados'] = array(
+    'archivo'=>'empleados.html',
     'layout'=>LAYOUT_DESKTOP
 );
 

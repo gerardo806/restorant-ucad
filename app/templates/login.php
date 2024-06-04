@@ -1,3 +1,10 @@
+<?php
+if (isset($_SESSION['restoran'])) {
+  header('Cache-control: no-cache; must-revalidate');
+  header('location: home');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

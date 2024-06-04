@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION['restoran'])) {
   header('Cache-control: no-cache; must-revalidate');
-  header('location: ?mod=login');
+  header('location: login');
 }
 ?>
 
@@ -52,10 +52,34 @@ if (!isset($_SESSION['restoran'])) {
                         class="fa-solid fa-bars text-white fs-3"></i></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home">Inicio</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#vacantes">Empleos</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#menus">Menús</a></li>
+                        <li class="nav-item">
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <div class="dropdown">
+                                <button class="btn bg-transparent text-white dropdown-toggle p-2 rounded-1" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Configuraciones
+                                </button>
+                                <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Roles</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="users">Usuarios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="nav-item mt-2 mt-lg-0">
+                            <div class="dropdown">
+                                <button class="btn bg-transparent text-white dropdown-toggle p-2 rounded-1" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Menús
+                                </button>
+                                <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Platillos</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="#">Bebidas</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="nav-item mt-2 mt-lg-0">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle p-2 rounded-1" type="button"

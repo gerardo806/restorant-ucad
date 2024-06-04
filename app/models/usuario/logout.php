@@ -1,6 +1,6 @@
 <?php
 
-require '../sql/conexion.php';
+ require '../sql/conexion.php';
     session_start();
     //session_destroy();
 
@@ -14,8 +14,11 @@ require '../sql/conexion.php';
         $_SESSION['restoran_usuario']
     );
 
-    $response=array('success'=>true, 'url'=>"?mod=login");
+    //$response=array('success'=>true, 'url'=>"?mod=login");
+    $response=array('success'=>true, 'url'=>"login");
 
     echo json_encode($response);
 
+    //$clave = password_hash("1234", PASSWORD_DEFAULT);
+    //echo "\n".$clave."";
 ?>
