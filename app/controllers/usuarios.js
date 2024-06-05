@@ -1,6 +1,14 @@
 $(document).ready(function () {
     listar_usuarios();
     listar_rol();
+
+    const formUsers = new bootstrap.Modal(document.getElementById('usersModal'), {
+        keyboard: false
+      });
+
+    $('#btn_nuevo_user').on("click", function () {
+        formUsers.show();
+    });
 });
 
 function listar_usuarios(){
@@ -76,13 +84,16 @@ function listar_rol(data){
             },
             cache: true
         },
-        theme: 'bootstrap4',
+        theme: 'bootstrap-5',
         allowClear: true,
-        minimumInputLength: 0
+        minimumInputLength: 0,
+        dropdownParent: $('#usersModal')
     });
+
     $("#id_rol").val(null).trigger('change');
+
     if(data!=undefined && data != null){
-        var option = new Option(data.rol, data.id_rol, false, false);
+        const option = new Option(data.nombre_rol, data.idrol, false, false);
         $("#id_rol").html(option);
         $("#id_rol").trigger('change');
     }

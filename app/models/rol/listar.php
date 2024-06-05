@@ -8,15 +8,17 @@ try{
     $params['query'] = ($params['query']=="") ? '%': '%'.$params['query'].'%';
     $response = array();
 
-    $sql = "SELECT id_rol id, rol text
-        FROM rol
+    $sql = "SELECT idrol as id, nombre_rol as text
+        FROM mydb.rol
         WHERE CAST(estado as UNSIGNED)=1
-        AND rol LIKE '$params[query]'";
+        AND nombre_rol LIKE '$params[query]'";
+
     $resultado = mysqli_query($con, $sql);
 
     if($resultado){
         if(mysqli_num_rows($resultado)>0){
             $items = array();
+            
             while($fila = mysqli_fetch_assoc($resultado)){
                 array_push($items, $fila);
             }

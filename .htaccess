@@ -14,7 +14,7 @@ RewriteRule ^(home)$ index.php?mod=inicio [QSA,L]
 RewriteRule ^(login)$ index.php?mod=login [QSA,L]
 RewriteRule ^(users)$ index.php?mod=usuarios [QSA,L]
 
-#RewriteRule ^([a-zA-Z0-9/]+)$ login.html?url=$1 [NC,L]
+#RewriteRule ^(.*)$ login.html?mod=$1 [NC,L]
 
 #Redirigir al archivo 404
 ErrorDocument 404 /restorant-ucad/app/views/error404.html

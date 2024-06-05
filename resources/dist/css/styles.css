@@ -1,4 +1,17 @@
-.img-logo-login{
+.img-logo-login {
     width: 10rem;
     height: auto;
 }
+
+.form-control::placeholder {
+    color: #9ea5ac;
+    /* Color del placeholder */
+    opacity: 1;
+    /* Para que el color se aplique correctamente */
+}
+
+.border-form,
+.select2-container--default .select2-selection--single{
+    border: 2px solid #8E8E8E;;
+}
+  

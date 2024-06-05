@@ -30,6 +30,7 @@ if (!isset($_SESSION['restoran'])) {
     <link href="resources/vendors/prism/prism.css" rel="stylesheet">
     <link href="resources/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="resources/dist/css/theme.css" rel="stylesheet" />
+    <link href="resources/plugins/select2-bootstrap5-theme/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
 
     <!-- jQuery -->
     <script src="resources/plugins/jquery/jquery.min.js"></script>
@@ -109,48 +110,36 @@ if (!isset($_SESSION['restoran'])) {
         </div>
 
         <section class="pt-0">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 col-sm-12">
-                        <a href="index.html"><img class="img-fluid mt-5 mb-4" src="resources/dist/img/black-logo.png"
-                                alt="" /></a>
-                        <p class="w-lg-75 text-gray">
-                            Social media validation business model canvas graphical user interface
-                            launch party creative facebook iPad twitter.
-                        </p>
-                    </div>
-                    <div class="col-lg-2 col-sm-4">
-                        <h3 class="fw-bold fs-1 mt-5 mb-4">Landings</h3>
-                        <ul class="list-unstyled">
-                            <li class="my-3 col-md-4"><a href="#">Home</a></li>
-                            <li class="my-3"><a href="#">Products</a></li>
-                            <li class="my-3"><a href="#">Services</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-sm-4">
-                        <h3 class="fw-bold fs-1 mt-5 mb-4">Company</h3>
-                        <ul class="list-unstyled">
-                            <li class="my-3"><a href="#">Home</a></li>
-                            <li class="my-3">
-                                <a href="#">Careers</a><span
-                                    class="py-1 px-2 rounded-2 bg-success fw-bold text-dark ms-2">Hiring!</span>
-                            </li>
-                            <li class="my-3"><a href="#">Services</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-sm-4">
-                        <h3 class="fw-bold fs-1 mt-5 mb-4">Resources</h3>
-                        <ul class="list-unstyled">
-                            <li class="mb-3"><a href="#">Home</a></li>
-                            <li class="mb-3"><a href="#">Products</a></li>
-                            <li class="mb-3"><a href="#">Services</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="text-gray">All rights reserved.</p>
-            </div>
-            <!-- end of .container-->
-        </section>
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-5 col-sm-12">
+        <a href="index.html"><img class="img-fluid mt-5 mb-4" src="resources/dist/img/pie_restaurante.png" alt="" /></a>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <h3 class="fw-bold fs-1 mt-5 mb-4">Misión</h3>
+        <ul class="list-unstyled">
+          <li class="my-3 col-md-4" style="width: 100%; max-width: 500px; margin: 0 auto; text-align: left;">Ofrecer una experiencia gastronómica única.</li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-4">
+        <h3 class="fw-bold fs-1 mt-5 mb-4">Visión</h3>
+        <ul class="list-unstyled">
+          <li class="my-3" style="width: 100%; max-width: 500px; margin: 0 auto; text-align: left;">Ser el restaurante de referencia en la ciudad.</li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-sm-4 text-center">
+        <h3 class="fw-bold fs-1 mt-5 mb-4">Valores</h3>
+        <ul class="list-unstyled">
+          <li class="my-2">Integridad</li>
+          <li class="my-2">Servicio</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-gray mt-5">Universidad Cristiana de las Asambleas de Dios</p>
+  </div>
+  <!-- end of .container-->
+</section>
+
     </main>
 
     <script src="resources/vendors/popper/popper.min.js"></script>
