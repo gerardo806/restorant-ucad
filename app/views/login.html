@@ -4,6 +4,43 @@
 <div>
   <!-- <section> close ============================-->
   <!-- ============================================-->
+<style>
+  .modal-content {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 1rem;
+  text-align: right;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+</style>
 
   <div class="bg-dark" id="inicio">
     <img class="img-fluid position-absolute end-0" src="resources/dist/img/local3.png" alt="" />
@@ -22,7 +59,7 @@
               los salvadoreños de San Salvador.
             </p>
             <div class="d-sm-flex align-items-center gap-3">
-              <button class="btn btn-success text-black mb-3 w-75">
+              <button type="button" class="btn btn-success text-black mb-3 w-75" data-bs-toggle="modal" data-bs-target="#historiaModal">
                 Leer más...
               </button>
             </div>
@@ -62,7 +99,38 @@
     <!-- <section> close ============================-->
     <!-- ============================================-->
   </div>
+  <div class="modal fade" id="historiaModal" tabindex="-1" aria-labelledby="historiaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historiaModalLabel">Historia del Restaurante</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>En las vibrantes calles de San Salvador, capital de El Salvador, se encuentra el emblemático restaurante Joya,
+             una joya culinaria que ha iluminado el panorama gastronómico desde su fundación en 1992. Aunque situado en una
+              ciudad conocida por su energía frenética y su rica cultura, Joya destaca como un oasis de elegancia y refinamiento, 
+              donde los sabores se entrelazan con la historia para crear una experiencia verdaderamente inolvidable.</p>
 
+         <p> La historia de Joya comienza con la visión de dos apasionados amantes de la gastronomía, Carlos Mendoza y Ana María González.
+             Inspirados por la riqueza culinaria de su país y su amor por la cocina tradicional salvadoreña, decidieron abrir las puertas 
+             de Joya con el objetivo de celebrar los sabores auténticos de la tierra.</p>
+            
+        <p> Desde el primer día, Joya se ganó la reputación de ser mucho más que un simple restaurante. Era un lugar donde la comida era 
+            un homenaje a la cultura y las tradiciones del país, donde cada plato contaba una historia de amor por los ingredientes locales
+             y el arte de la cocina.</p>
+            
+        <p>Con el tiempo, Joya se convirtió en un punto de referencia en la escena gastronómica de San Salvador, atrayendo a comensales de
+             todas partes con su exquisita comida y su cálida hospitalidad. Los platos estrella como la pupusa rellena de queso, el tamal de
+              elote y el ceviche de camarón se convirtieron en favoritos de los clientes, quienes regresaban una y otra vez en busca de esa 
+              explosión de sabores que solo Joya podía ofrecer..</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ============================================-->
   <!-- <section> begin ============================-->
   <section>
@@ -512,6 +580,9 @@
 <!-- ============================================-->
 
 <script type="module" src="app/controllers/login.js"></script>
+
+<script type="module" src="app/controllers/login.js"></script>
+
 <script>
   // Obtener la fecha actual en el formato "yyyy-mm-dd"
   var today = new Date().toISOString().split('T')[0];
