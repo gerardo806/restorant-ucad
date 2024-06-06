@@ -1,0 +1,594 @@
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+<div>
+  <!-- <section> close ============================-->
+  <!-- ============================================-->
+<style>
+  .modal-content {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 1rem;
+  text-align: right;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+</style>
+
+  <div class="bg-dark" id="inicio">
+    <img class="img-fluid position-absolute end-0" src="resources/dist/img/local3.png" alt="" />
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="vh-100">
+      <div class="container">
+        <div class="row align-items-center py-lg-8 py-6">
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="text-white fs-5 fs-xl-6">
+              Joya's Restaurant
+            </h1>
+            <p class="text-white py-lg-3 py-2">
+              Fundado en El Salvador en 1992, Joya's Restaurant se ha convertido en la opcion preferida de
+              los salvadoreños de San Salvador.
+            </p>
+            <div class="d-sm-flex align-items-center gap-3">
+              <button type="button" class="btn btn-success text-black mb-3 w-75" data-bs-toggle="modal" data-bs-target="#historiaModal">
+                Leer más...
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end mt-3 mt-lg-0">
+            <img class="img-fluid" src="resources/dist/img/logo-joya-restaurant.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-container swiper-shadow swiper-theme"
+            data-swiper='{"slidesPerView":2,"breakpoints":{"640":{"slidesPerView":2,"spaceBetween":20},"768":{"slidesPerView":4,"spaceBetween":40},"992":{"slidesPerView":5,"spaceBetween":40},"1024":{"slidesPerView":4,"spaceBetween":50},"1025":{"slidesPerView":6,"spaceBetween":50}},"spaceBetween":10,"grabCursor":true,"pagination":{"el":".swiper-pagination","clickable":true},"loop":true,"freeMode":true,"autoplay":{"delay":2500,"disableOnInteraction":false}}'>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/desayuno.png" alt="" />
+              </div>
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/almuerzo.png" alt="" />
+              </div>
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/cena.png" alt="" />
+              </div>
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/postres.png" alt="" />
+              </div>
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/combos.png" alt="" />
+              </div>
+              <div class="swiper-slide text-center">
+                <img src="resources/dist/img/logos/eventos.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of .container-->
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+  </div>
+  <div class="modal fade" id="historiaModal" tabindex="-1" aria-labelledby="historiaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historiaModalLabel">Historia del Restaurante</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>En las vibrantes calles de San Salvador, capital de El Salvador, se encuentra el emblemático restaurante Joya,
+             una joya culinaria que ha iluminado el panorama gastronómico desde su fundación en 1992. Aunque situado en una
+              ciudad conocida por su energía frenética y su rica cultura, Joya destaca como un oasis de elegancia y refinamiento, 
+              donde los sabores se entrelazan con la historia para crear una experiencia verdaderamente inolvidable.</p>
+
+         <p> La historia de Joya comienza con la visión de dos apasionados amantes de la gastronomía, Carlos Mendoza y Ana María González.
+             Inspirados por la riqueza culinaria de su país y su amor por la cocina tradicional salvadoreña, decidieron abrir las puertas 
+             de Joya con el objetivo de celebrar los sabores auténticos de la tierra.</p>
+            
+        <p> Desde el primer día, Joya se ganó la reputación de ser mucho más que un simple restaurante. Era un lugar donde la comida era 
+            un homenaje a la cultura y las tradiciones del país, donde cada plato contaba una historia de amor por los ingredientes locales
+             y el arte de la cocina.</p>
+            
+        <p>Con el tiempo, Joya se convirtió en un punto de referencia en la escena gastronómica de San Salvador, atrayendo a comensales de
+             todas partes con su exquisita comida y su cálida hospitalidad. Los platos estrella como la pupusa rellena de queso, el tamal de
+              elote y el ceviche de camarón se convirtieron en favoritos de los clientes, quienes regresaban una y otra vez en busca de esa 
+              explosión de sabores que solo Joya podía ofrecer..</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================-->
+  <!-- <section> begin ============================-->
+  <section>
+    <div class="container" id="vacantes">
+      <p class="text-center fs-1">Sección de empleos</p>
+      <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mt-4">
+        Vacantes disponibles
+      </h2>
+      <div class="row gx-xl-7 mt-5">
+        
+        <!-- Plaza de Cocina -->
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
+          <img class="w-50 w-md-100" src="resources/dist/img/services/9.jpeg" alt="" />
+          <h4 class="mt-3 my-1">Asistente de cocina</h4>
+          <p class="fs-1 mb-0">
+            Buscamos un asistente de cocina proactivo y motivado
+            para nuestro restaurante en Joya's Restaurant.
+          </p>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#cocinaModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Asistente de Cocina / Cocinera -->
+          <div class="modal fade" id="cocinaModal" tabindex="-1" aria-labelledby="cocinaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cocinaModalLabel">Información del Puesto - Asistente de Cocina / Cocinera
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Asistente de Cocina / Cocinera</td>
+                        <td>Buscamos un/a asistente de cocina proactivo/a y motivado/a para nuestro restaurante en
+                          Joya's Restaurant. Trabajará con el jefe de cocina y el equipo para asegurar la alta calidad
+                          en la preparación y presentación de los platos.</td>
+                        <td>Turno rotativo</td>
+                        <td>$1800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plaza de Cajera -->
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
+          <img class="w-50 w-md-100" src="resources/dist/img/services/8.jpeg" alt="" />
+          <h4 class="mt-3 my-1">Cajera</h4>
+          <p class="fs-1 mb-0">
+            Estamos buscando una cajera amable y eficiente para nuestro establecimiento
+            en Joya's Restaurant.
+          </p>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#cajeraModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Cajera -->
+          <div class="modal fade" id="cajeraModal" tabindex="-1" aria-labelledby="cajeraModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="cajeraModalLabel">Información del Puesto - Cajera</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Cajera</td>
+                        <td>Estamos buscando una cajera amable y eficiente para nuestro establecimiento en Joya's
+                          Restaurant. Responsabilidades incluyen manejar transacciones con precisión y cortesía, y
+                          asegurar una experiencia de cliente positiva.</td>
+                        <td>Turno rotativo</td>
+                        <td>$1700</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Plaza de Vigilante -->
+        <div class="col-md-4 mb-6 mb-md-0 text-center text-md-start">
+          <img class="w-50 w-md-100" src="resources/dist/img/services/10.jpeg" alt="" />
+          <h4 class="mt-3 my-1">Vigilante</h4>
+          <p class="fs-1 mb-0">
+            Se necesita un vigilante para garantizar la seguridad de nuestro
+            restaurante en Joya's Restaurant.
+          </p>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#vigilanteModal" style="margin-top: 10px;">
+            Más información
+          </button>
+
+          <!-- Modal de Vigilante -->
+          <div class="modal fade" id="vigilanteModal" tabindex="-1" aria-labelledby="vigilanteModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="vigilanteModalLabel">Información del Puesto - Vigilante</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cargo</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Turno</th>
+                        <th scope="col">Salario</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Vigilante</td>
+                        <td>Se necesita un vigilante para garantizar la seguridad de nuestro restaurante en Joya's
+                          Restaurant. Responsabilidades incluyen patrullar las instalaciones, monitorear cámaras de
+                          seguridad y responder a situaciones de emergencia.</td>
+                        <td>Turno nocturno</td>
+                        <td>$2000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>Interesados enviar su CV a <a href="mailto:cocina@gmail.com">cocina@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- end of .container-->
+  </section>
+  <!-- <section> close ============================-->
+  <!-- ============================================-->
+
+  <!-- ============================================-->
+  <!-- <section> begin ============================-->
+  <hr>
+  <section>
+    <div class="container" id="desayuno">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">¡Saborea la perfección con nuestros combos diarios!</h1>
+      <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Desayunos</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="img-fluid" src="resources/dist/img/huevos.jpeg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fs-xl-5 fs-lg-4 fs-3">
+            El desayuno para iniciar el día
+          </h2>
+          <ul class="list-unstyled my-xl-5 my-3">
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Café.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Huevos revueltos.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Pan tostado.</span>
+            </li><li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$4.00</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center p-3"
+            data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+            Solicitar Pedido
+          </button>
+
+          <!-- Modal de de pedido de meno desayuno -->
+          <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="fechaPedido">Fecha del Pedido</label>
+                        <input type="date" class="form-control" id="fechaPedido" value="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nombre del cliente</label>
+                        <input type="name" class="form-control" id="inputPassword4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- end of .container-->
+  </section>
+  <section>
+    <div class="container" id="almuerzo">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Almuerzos</h1>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="img-fluid" src="resources/dist/img/hambu1.jpeg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fs-xl-5 fs-lg-4 fs-3">
+            Un almuerzo ejecutivo
+          </h2>
+          <ul class="list-unstyled my-xl-5 my-3">
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Gaseosa.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Hamburguesa Clásica.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Papas Fritas.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$13.00</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+          data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+          Solicitar Pedido
+        </button>
+
+        <!-- Modal de de pedido de meno desayuno -->
+        <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="fechaPedido">Fecha del Pedido</label>
+                      <input type="date" class="form-control" id="fechaPedido" value="">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Nombre del cliente</label>
+                      <input type="name" class="form-control" id="inputPassword4">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress">Pedido</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Cantidad</label>
+                    <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Cerrar
+                </button>
+                <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <section>
+    <div class="container" id="cena">
+      <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Cena</h1>
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img class="img-fluid" src="resources/dist/img/lasaña.jpeg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fs-xl-5 fs-lg-4 fs-3">
+            La cena ligera y balanceada
+          </h2>
+          <ul class="list-unstyled my-xl-5 my-3">
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Licuado</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Lasagña de Carne.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>Pan tostado.</span>
+            </li>
+            <li class="fs-2 my-4 d-flex align-items-center gap-3 text-black">
+              <i class="fa-solid fa-circle-check fs-4 text-dark"></i><span>$16.00</span>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-outline-dark btn-lg fw-bold d-flex align-items-center"
+            data-bs-toggle="modal" data-bs-target="#desayunoModal" style="margin-top: 10px;">
+            Solicitar Pedido
+          </button>
+
+          <!-- Modal de de pedido de meno desayuno -->
+          <div class="modal fade" id="desayunoModal" tabindex="-1" aria-labelledby="desayunoModallLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="desayunoModalLabel">Realizar el pedido</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="fechaPedido">Fecha del Pedido</label>
+                        <input type="date" class="form-control" id="fechaPedido" value="">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4">Nombre del cliente</label>
+                        <input type="name" class="form-control" id="inputPassword4">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary" onclick="guardarPedido()">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+  <section class="pt-0">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-5 col-sm-12">
+          <a href="index.html"><img class="img-fluid mt-5 mb-4" src="resources/dist/img/pie_restaurante.png" alt="" /></a>
+        </div>
+        <div class="col-lg-2 col-sm-4">
+          <h3 class="fw-bold fs-1 mt-5 mb-4">Restaurante</h3>
+          <ul class="list-unstyled">
+            <li class="my-3 col-md-4"><a href="#">Inicio</a></li>
+            <li class="my-3"><a href="#vacantes">Vacantes</a></li>
+            <li class="my-3"><a href="#desayuno">Promociones</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-4">
+          <h3 class="fw-bold fs-1 mt-5 mb-4">Contactanos</h3>
+          <ul class="list-unstyled">
+            <li class="my-3">2257-7777</li>
+            <li class="my-3">restaurante@joya.sv</li>
+            <li class="my-3">San Salvador</li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-4 text-center">
+          <h3 class="fw-bold fs-1 mt-5 mb-4">Siguenos</h3>
+          <ul class="list-unstyled">
+            <li class="my-3"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></li>
+            <li class="my-3"><a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            <li class="my-3"><a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-gray mt-5">Universidad Cristiana de las Asambleas de Dios</p>
+    </div>
+    <!-- end of .container-->
+  </section>
+  
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+<script type="module" src="app/controllers/login.js"></script>
+
+<script type="module" src="app/controllers/login.js"></script>
+
+<script>
+  // Obtener la fecha actual en el formato "yyyy-mm-dd"
+  var today = new Date().toISOString().split('T')[0];
+  
+  // Establecer la fecha actual como valor predeterminado para el campo de entrada de fecha
+  document.getElementById('fechaPedido').value = today;
+</script>
+
+
