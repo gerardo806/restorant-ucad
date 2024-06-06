@@ -31,12 +31,10 @@ $conf['platillos'] = array(
     'layout'=>LAYOUT_DESKTOP
 );
 
-<<<<<<< HEAD
 $conf['bebidas'] = array(
     'archivo'=>'menus/bebidas.html',
     'layout'=>LAYOUT_DESKTOP
 );
 
-=======
->>>>>>> 84a94823acacae0ef695b867f5a927511f5ff0e7
+
 ?>
