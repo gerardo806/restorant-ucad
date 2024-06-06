@@ -185,7 +185,11 @@ $(document).ready(function () {
         // Lógica para eliminar el usuario con el ID obtenido
         console.log('Eliminar usuario con ID:', id);
         Swal.fire({
+<<<<<<< HEAD
             title: "Esta segur@?",
+=======
+            title: "Estas seguro?",
+>>>>>>> 84a94823acacae0ef695b867f5a927511f5ff0e7
             text: "No se podra revertir este cambio!",
             icon: "warning",
             showCancelButton: true,

@@ -14,7 +14,10 @@ RewriteRule ^(home)$ index.php?mod=inicio [QSA,L]
 RewriteRule ^(login)$ index.php?mod=login [QSA,L]
 RewriteRule ^(users)$ index.php?mod=usuarios [QSA,L]
 RewriteRule ^(platillos)$ index.php?mod=platillos [QSA,L]
+<<<<<<< HEAD
 RewriteRule ^(bebidas)$ index.php?mod=bebidas [QSA,L]
+=======
+>>>>>>> 84a94823acacae0ef695b867f5a927511f5ff0e7
 
 #RewriteRule ^(.*)$ login.html?mod=$1 [NC,L]
 

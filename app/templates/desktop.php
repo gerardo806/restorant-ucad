@@ -77,7 +77,11 @@ if (!isset($_SESSION['restoran'])) {
                                 </button>
                                 <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="platillos">Platillos</a></li>
+<<<<<<< HEAD
                                     <li><a class="dropdown-item border-bottom" href="bebidas">Bebidas</a></li>
+=======
+                                    <li><a class="dropdown-item border-bottom" href="#">Bebidas</a></li>
+>>>>>>> 84a94823acacae0ef695b867f5a927511f5ff0e7
                                 </ul>
                             </div>
                         </li>
