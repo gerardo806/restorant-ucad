@@ -26,17 +26,14 @@ $conf['usuarios'] = array(
     'layout'=>LAYOUT_DESKTOP
 );
 
-$conf['tamales'] = array(
-    'archivo'=>'vehiculos.html',
+$conf['platillos'] = array(
+    'archivo'=>'menus/platillos.html',
     'layout'=>LAYOUT_DESKTOP
 );
 
-if(1==2){
-
-    $conf['pupusas'] = array(
-        'archivo'=>'vehiculos.html',
-        'layout'=>LAYOUT_DESKTOP
-    );
-}
+$conf['bebidas'] = array(
+    'archivo'=>'menus/bebidas.html',
+    'layout'=>LAYOUT_DESKTOP
+);
 
 ?>
