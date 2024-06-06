@@ -13,11 +13,10 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
                         <th>Usuario</th>
+                        <th>Fecha creación</th>
                         <th>Rol</th>
-                        <th>Estado</th>
+                        <th>Descripción</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -38,35 +37,9 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form id="frm_registro_car" name="frm_registro_car" onsubmit="return false" autocomplete="off">
-                <input type="hidden" id="id_usuario" name="id_usuario">
+            <form id="frm_registro_user" name="frm_registro_user" autocomplete="off">
                 <div class="row">
-                    <div class="col-6">
-                        <label class="fw-bold">Nombres</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon1">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Nombres..." name="nombres" id="nombres">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <label class="fw-bold">Apellidos</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon2">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Apellidos" name="apellidos" id="apellidos"
-                                required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 msgHelp">
                         <label class="fw-bold">Usuario</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -78,7 +51,7 @@
                                 id="usuario" required>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 msgHelp">
                         <label class="fw-bold">Rol</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -91,7 +64,90 @@
                         </div>
                     </div>
                 </div>
-                <input type="submit" class="btn btn-success border-form w-100 p-2" value="Guardar">
+                <div class="row">
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Clave</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control rounded-end px-2 py-0" placeholder="Contraseña" name="clave"
+                                id="clave" required>
+                        </div>
+                    </div>
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Confirmar clave</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control rounded-end px-2 py-0" placeholder="Confirmar clave" name="confirmarClave"
+                                id="confirmarClave">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="btn_user_save" name="btn_user_save" class="btn btn-success border-form w-100 p-2" value="Guardar">
+            </form>
+
+            <form id="frm_update_user" name="frm_update_user" autocomplete="off" class="d-none">
+                <input type="hidden" id="id_usuario" name="id_usuario">
+                <div class="row">
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Usuario</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Usuario" name="usuarioUpdate"
+                                id="usuarioUpdate">
+                        </div>
+                    </div>
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Rol</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon4">
+                                    <i class="fas fa-list-alt"></i>
+                                </span>
+                            </div>
+                            <select class="form-control " name="id_rolUpdate" id="id_rolUpdate">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Clave</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control rounded-end px-2 py-0" placeholder="Contraseña" name="claveUpdate"
+                                id="claveUpdate">
+                        </div>
+                    </div>
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Confirmar clave</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="password" class="form-control rounded-end px-2 py-0" placeholder="Confirmar clave" name="confirmarClaveUpdate"
+                                id="confirmarClaveUpdate">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="btn_user_update" name="btn_user_update" class="btn btn-success border-form w-100 p-2" value="Actualizar">
             </form>
         </div>
         <div class="modal-footer">
