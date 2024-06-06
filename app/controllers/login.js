@@ -61,6 +61,14 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function() {
+    $('#historiaModal').on('shown.bs.modal', function () {
+      $('#historiaModal').trigger('focus')
+    })
+  })
+
+
+
 /* $(document).ready(function () {
     $("#btn_login").click(function () { 
         iniciar_sesion();
