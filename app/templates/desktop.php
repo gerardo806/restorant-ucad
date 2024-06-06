@@ -88,8 +88,6 @@ if (!isset($_SESSION['restoran'])) {
                                     <?=$_SESSION['restoran_usuario']?>
                                 </button>
                                 <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item border-bottom" href="#">Another action</a></li>
                                     <li><a class="dropdown-item" id="logout" href="#">Cerrar sesión</a></li>
                                 </ul>
                             </div>

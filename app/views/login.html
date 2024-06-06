@@ -315,7 +315,7 @@
   <!-- ============================================-->
   <!-- <section> begin ============================-->
   <hr>
-  <section>
+  <section id="menus">
     <div class="container" id="desayuno">
       <h1 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">¡Saborea la perfección con nuestros combos diarios!</h1>
       <h2 class="mx-auto text-center fs-lg-6 fs-md-5 w-lg-75 mb-5">Desayunos</h2>
@@ -359,20 +359,20 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="fechaPedido">Fecha del Pedido</label>
-                        <input type="date" class="form-control" id="fechaPedido" value="">
+                        <input type="date" class="form-control" id="fechaPedido1" value="">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputPassword4">Nombre del cliente</label>
-                        <input type="name" class="form-control" id="inputPassword4">
+                        <label for="inputPassword2">Nombre del cliente</label>
+                        <input type="name" class="form-control" id="inputPassword2">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress">Pedido</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                      <label for="inputAddress7">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress7" placeholder="Ingrese el nombre de del palto a ordenar">
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress2">Cantidad</label>
-                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                      <label for="inputAddress8">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress8" placeholder="Ingrese la cantidad de platos">
                     </div>
                   </form>
                 </div>
@@ -432,20 +432,20 @@
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="fechaPedido">Fecha del Pedido</label>
-                      <input type="date" class="form-control" id="fechaPedido" value="">
+                      <input type="date" class="form-control" id="fechaPedido2" value="">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputPassword4">Nombre del cliente</label>
-                      <input type="name" class="form-control" id="inputPassword4">
+                      <label for="inputPassword6">Nombre del cliente</label>
+                      <input type="name" class="form-control" id="inputPassword6">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputAddress">Pedido</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                    <label for="inputAddress3">Pedido</label>
+                    <input type="text" class="form-control" id="inputAddress3" placeholder="Ingrese el nombre de del palto a ordenar">
                   </div>
                   <div class="form-group">
-                    <label for="inputAddress2">Cantidad</label>
-                    <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                    <label for="inputAddress4">Cantidad</label>
+                    <input type="number" class="form-control" id="inputAddress4" placeholder="Ingrese la cantidad de platos">
                   </div>
                 </form>
               </div>
@@ -503,7 +503,7 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="fechaPedido">Fecha del Pedido</label>
-                        <input type="date" class="form-control" id="fechaPedido" value="">
+                        <input type="date" class="form-control" id="fechaPedido3" value="">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputPassword4">Nombre del cliente</label>
@@ -511,12 +511,12 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress">Pedido</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de del palto a ordenar">
+                      <label for="inputAddress5">Pedido</label>
+                      <input type="text" class="form-control" id="inputAddress5" placeholder="Ingrese el nombre de del palto a ordenar">
                     </div>
                     <div class="form-group">
-                      <label for="inputAddress2">Cantidad</label>
-                      <input type="number" class="form-control" id="inputAddress2" placeholder="Ingrese la cantidad de platos">
+                      <label for="inputAddress6">Cantidad</label>
+                      <input type="number" class="form-control" id="inputAddress6" placeholder="Ingrese la cantidad de platos">
                     </div>
                   </form>
                 </div>
@@ -588,7 +588,9 @@
   const today = new Date().toISOString().split('T')[0];
   
   // Establecer la fecha actual como valor predeterminado para el campo de entrada de fecha
-  document.getElementById('fechaPedido').value = today;
+  document.getElementById('fechaPedido1').value = today;
+  document.getElementById('fechaPedido2').value = today;
+  document.getElementById('fechaPedido3').value = today;
 </script>
 
 
