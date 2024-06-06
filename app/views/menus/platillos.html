@@ -1,0 +1,135 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-12 text-right">
+            <button type="button" class="btn btn-outline-success p-3" data-toggle="modal" data-target="#menuModal" 
+                id="btn_nuevo_menu">
+                <i class="fas fa-user-plus"></i> Nuevo menú
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="tbl_menus" class="table table-dark table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Platillo</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="menuModal" aria-labelledby="menuModalModalForm" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="menuModalModalForm">
+            Registro de platillo
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="frm_registro_menu" name="frm_registro_menu" autocomplete="off">
+                <div class="row">
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Platillo</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Nombre del platillo" name="platillo"
+                                id="platillo" required>
+                        </div>
+                    </div>
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Precio</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Precio del platillo" name="precio"
+                                id="precio">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 msgHelp">
+                        <label class="fw-bold">Descripción</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0 py-5" id="basic-addon4">
+                                    <i class="fas fa-list-alt note-fontsize-10"></i>
+                                </span>
+                            </div>
+                            <textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="btn_menu_save" name="btn_menu_save" class="btn btn-success border-form w-100 p-2" value="Guardar">
+            </form>
+
+            <form id="frm_update_menu" name="frm_update_menu" autocomplete="off">
+                <div class="row">
+                    <input type="text" name="id_platillo" id="id_platillo">
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Platillo</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Nombre del platillo" name="platilloUpdate" id="platilloUpdate">
+                        </div>
+                    </div>
+                    <div class="col-6 msgHelp">
+                        <label class="fw-bold">Precio</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0" id="basic-addon3">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control rounded-end px-2 py-0" placeholder="Precio del platillo" name="precioUpdate"
+                                id="precioUpdate">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 msgHelp">
+                        <label class="fw-bold">Descripción</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-light rounded-end-0 py-5" id="basic-addon4">
+                                    <i class="fas fa-list-alt note-fontsize-10"></i>
+                                </span>
+                            </div>
+                            <textarea class="form-control" name="descripcionUpdate" id="descripcionUpdate"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="btn_menu_update" name="btn_menu_update" class="btn btn-success border-form w-100 p-2" value="Actualizar">
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary p-2 px-3" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="module" src="app/controllers/menus/platillos.js"></script>
