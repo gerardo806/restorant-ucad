@@ -15,6 +15,7 @@ RewriteRule ^(login)$ index.php?mod=login [QSA,L]
 RewriteRule ^(users)$ index.php?mod=usuarios [QSA,L]
 RewriteRule ^(platillos)$ index.php?mod=platillos [QSA,L]
 RewriteRule ^(bebidas)$ index.php?mod=bebidas [QSA,L]
+RewriteRule ^(postres)$ index.php?mod=postres [QSA,L]
 
 #RewriteRule ^(.*)$ login.html?mod=$1 [NC,L]
 

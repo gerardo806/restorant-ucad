@@ -63,7 +63,6 @@ if (!isset($_SESSION['restoran'])) {
                                     Configuraciones
                                 </button>
                                 <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">Roles</a></li>
                                     <li><a class="dropdown-item border-bottom" href="users">Usuarios</a></li>
                                 </ul>
                             </div>
@@ -78,6 +77,7 @@ if (!isset($_SESSION['restoran'])) {
                                 <ul class="dropdown-menu rounded-1 p-0" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="platillos">Platillos</a></li>
                                     <li><a class="dropdown-item border-bottom" href="bebidas">Bebidas</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="postres">Postres</a></li>
                                 </ul>
                             </div>
                         </li>

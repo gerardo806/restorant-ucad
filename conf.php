@@ -36,5 +36,8 @@ $conf['bebidas'] = array(
     'layout'=>LAYOUT_DESKTOP
 );
 
-
+$conf['postres'] = array(
+    'archivo'=>'menus/postres.html',
+    'layout'=>LAYOUT_DESKTOP
+);
 ?>
